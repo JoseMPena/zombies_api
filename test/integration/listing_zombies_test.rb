@@ -1,4 +1,4 @@
-# encoding: US-ASCII
+# -*- encoding : utf-8 -*-
 require 'test_helper'
 
 class ListingZombiesTest < ActionDispatch::IntegrationTest
@@ -22,7 +22,7 @@ class ListingZombiesTest < ActionDispatch::IntegrationTest
     zombies = JSON.parse(response.body, symbolize_names: true)
     names = zombies.collect { |z| z[:name]  }
 
-    assert_includes name, 'Joanna'
-    assert_includes name, 'John'
+    refute_includes names, 'Joanna'
+    assert_includes names, 'John'
   end
 end
