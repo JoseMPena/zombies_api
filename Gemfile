@@ -26,8 +26,9 @@ group :development, :test do
 end
 
 group :test do
-  # Use FactoryGirl for test data creation
+  # Use FactoryGirl and FFaker for test data creation
   gem 'factory_girl_rails'
+  gem 'ffaker'
 
   #RSpec for the test cases
   gem 'rspec-rails'
