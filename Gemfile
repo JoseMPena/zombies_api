@@ -23,16 +23,11 @@ gem 'puma', '~> 3.0'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
-end
-
-group :test do
   # Use FactoryGirl and FFaker for test data creation
   gem 'factory_girl_rails'
   gem 'ffaker'
-
   #RSpec for the test cases
-  gem 'rspec-rails'
-
+  gem 'rspec-rails', '~> 3.5'
   # Adds encoding line to rb files
   gem 'magic_encoding'
 end
